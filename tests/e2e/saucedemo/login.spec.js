@@ -37,7 +37,7 @@ test.describe('Login tests', () => {
     await loginPage.open();
     await loginPage.login('standard_user', 'secret_sauce');
 
-    await expect(page).toHaveURL(/inventory/);
+    await expect(page).toHaveURL(/inventoryFAIL/);
   });
 
   test.describe('Negative login scenarios (data-driven) @regression', () => {
