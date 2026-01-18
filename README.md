@@ -83,9 +83,25 @@ npx playwright test tests/e2e
 npx playwright test tests/api
 ~~~
 
+### Run tests in headed mode
+~~~bash
+npx playwright test --headed
+~~~
+
+---
+
+## 🏷 Test Tagging
+
+Tests are tagged for selective execution.
+
 ### Run smoke tests
 ~~~bash
 npx playwright test --grep "@smoke"
+~~~
+
+### Run regression tests
+~~~bash
+npx playwright test --grep "@regression"
 ~~~
 
 ---
@@ -124,12 +140,27 @@ This reflects **real-world QA decision making** when dealing with external syste
 
 ---
 
-## 🧠 QA Decisions
+## 🧠 QA Decisions & Best Practices
 
-- Test stability is prioritized over ideal expectations
-- External system behavior is **documented, not hidden**
-- Data-driven testing is used to reduce duplication
-- CI ensures tests are executed on every **push and pull request**
+- ✅ Test stability is prioritized over ideal expectations
+- ✅ External system behavior is documented, not hidden
+- ✅ API and UI tests are clearly separated
+- ✅ Data-driven testing reduces duplication
+- ✅ CI validates every push and pull request
+- ✅ Failures are intentional and visible
+
+---
+
+## 🔄 CI / GitHub Actions
+
+- CI runs automatically on:
+  - `push`
+  - `pull_request`
+- Tests run in headless mode
+- Pipeline fails on any test failure
+- HTML report is stored as an artifact
+
+This ensures **continuous quality feedback**.
 
 ---
 
@@ -139,6 +170,7 @@ This reflects **real-world QA decision making** when dealing with external syste
 - JavaScript
 - Node.js
 - GitHub Actions
+- Page Object Model (POM)
 
 ---
 
@@ -159,5 +191,3 @@ All AI prompts, outputs, and QA reviews are documented in the `ai/` folder.
 ## 👤 Author
 QA Engineer with 6+ years of experience in manual testing and growing expertise in QA Automation.
 Focused on reliable test automation, clean code practices, and modern QA workflows using AI as a productivity tool.
-
-CI BADGE - ![Playwright Tests](https://github.com/MiroslavGeorgievv/playwright-qa-portfolio/actions/workflows/playwright.yml/badge.svg)
