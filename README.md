@@ -1,6 +1,6 @@
 # Playwright Automation Project (UI + API)
 
-![Playwright Tests](https://github.com/<YOUR_GITHUB_USERNAME>/<REPO_NAME>/actions/workflows/playwright.yml/badge.svg)
+![Playwright Tests](https://github.com/MiroslavGeorgievv/playwright-qa-portfolio/actions/workflows/playwright.yml/badge.svg)
 
 ---
 
@@ -160,4 +160,4 @@ All AI prompts, outputs, and QA reviews are documented in the `ai/` folder.
 QA Engineer with 6+ years of experience in manual testing and growing expertise in QA Automation.
 Focused on reliable test automation, clean code practices, and modern QA workflows using AI as a productivity tool.
 
-CI BADGE - ![Playwright Tests](https://github.com/<USERNAME>/<REPO>/actions/workflows/playwright.yml/badge.svg)
+CI BADGE - ![Playwright Tests](https://github.com/MiroslavGeorgievv/playwright-qa-portfolio/actions/workflows/playwright.yml/badge.svg)
