@@ -32,15 +32,36 @@ The project demonstrates **real-world test automation practices**, including:
 
 ## 📂 Project Structure
 
-ai/                 # AI-assisted documentation and test generation prompts
-pages/              # Page Object Model (UI abstraction layer)
+ai/
+├── failure-analysis.md              # AI-assisted failure analysis
+├── generate-playwright-tests.md     # AI prompts for Playwright test generation
+└── generate-test-cases.md           # AI-assisted test case generation
+
+pages/
+├── LoginPage.js                     # Page Object Model – Login page
+└── InventoryPage.js                 # Page Object Model – Inventory page
+
 tests/
-├── e2e/             # UI end-to-end tests
+├── e2e/
 │   └── saucedemo/
-├── api/             # API tests
-│   ├── reqres/      # ReqRes demo API tests
-│   └── saucedemo/   # SauceDemo API tests
-.github/workflows/   # CI configuration (GitHub Actions)
+│       ├── login.spec.js            # UI login tests
+│       └── add-to-cart.spec.js       # UI add-to-cart tests
+│
+├── api/
+│   ├── reqres/
+│   │   └── login.api.spec.js         # ReqRes demo API tests
+│   │
+│   └── saucedemo/
+│       ├── login.api.spec.js         # SauceDemo API login tests
+│       └── saucedemo.api.spec.js     # SauceDemo API tests
+│
+.github/
+└── workflows/
+    └── playwright.yml                # GitHub Actions CI configuration
+
+playwright.config.js                 # Playwright configuration
+package.json                          # Project dependencies and scripts
+README.md                             # Project documentation
 
 ### Folder responsibilities
 
